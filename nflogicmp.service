@@ -1,0 +1,13 @@
+[Unit]
+Description=nflogicmp server
+
+[Service]
+Type=notify
+ExecStart=/usr/local/sbin/nflogicmp
+RuntimeDirectory=nflogicmp
+StateDirectory=nflogicmp
+Restart=always
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target
